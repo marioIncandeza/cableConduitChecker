@@ -1,6 +1,7 @@
-var XLSX = require('xlsx');
+var projectSchedule = 'trial.xlsx';
 
-var workbook = XLSX.readFile('sixtySeven.xlsx');
+var XLSX = require('xlsx');
+var workbook = XLSX.readFile(projectSchedule);
 var conduit = workbook.Sheets['Conduit Schedule'];
 var cable = workbook.Sheets['Cable Schedule'];
 var cellAddress;

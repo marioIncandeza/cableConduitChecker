@@ -1,0 +1,14 @@
+{
+  "name": "cableconduitchecker",
+  "version": "1.0.0",
+  "description": "This is how to use this thing :D",
+  "main": "ccsCheck.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "xlsx": "^0.12.11"
+  }
+}

@@ -34,7 +34,7 @@ program will move onto the conduit schedule and confirm the included cables.
 By default, the script is pointed toward "trial.xlsx" which has some intentional mistakes in it to help you interpret the output array. Ideally, if there are no mistakes in the columns under consideration, the array returned by 
 the script will be empty.
 ```
-[] \\ you're good to go!
+[] // you're good to go!
 ````````````````````````````````````````````````````````
 
 ## Notes

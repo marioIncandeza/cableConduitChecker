@@ -1,9 +1,9 @@
-var projectSchedule = 'trial.xlsx';
-var acceptable = ['n/a', 'TBD', 'TRAY', '4/0', 'SPARE'];
+var projectSchedule = 'trial.xlsx';  //path to schedule goes here
+var acceptable = ['n/a', 'TBD', 'TRAY', '4/0', 'SPARE'];  //list of entries that are ignored
 var XLSX = require('xlsx');
 var workbook = XLSX.readFile(projectSchedule);
-var conduit = workbook.Sheets['Conduit Schedule'];
-var cable = workbook.Sheets['Cable Schedule'];
+var conduit = workbook.Sheets['Conduit Schedule'];  //the name of the sheet which corresponds to the Conduit Schedule
+var cable = workbook.Sheets['Cable Schedule'];  //the name of the sheet which corresponds to the Calbe Schedule
 var cellAddress;
 var cellRef;
 var conduitNo = [];

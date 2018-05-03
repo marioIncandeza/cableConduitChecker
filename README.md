@@ -7,7 +7,7 @@ To run the script, first you'll need to install [Node.js](https://nodejs.org/en/
 Follow the link and download the recommended version. The link should automatically point you to the right version for your operating system. Once the download finishes, run the installer and click through all 
 of the default options.
 
-Once you've installed Node, you'll need to download the repository. The most direct way to do this is to download the .zip file. Look for the big green button near the upper-right. Click it. Select "Download ZIP".
+Once you've installed Node, you'll need to download the repository. The most direct way to do this is to download the .zip file. Look for the big green button near the upper-right of the github page. Click it. Select "Download ZIP".
 Now unzip the folder and put it wherever. Now you're going to have to navigate to that folder using the Command Prompt. So go ahead and open up the command prompt (press that windows button or just type `cmd` into that box in the lower-left corner of the screen). Once you're there, you can check the present working directory by typing in `dir`. To change directories, use the `cd` command. 
 
 For example, if I unzipped the folder on my Desktop, I'd do the following:
@@ -15,10 +15,11 @@ For example, if I unzipped the folder on my Desktop, I'd do the following:
 cd C:\Users\lae\Desktop
 ````
 
-Once you're in the right directory, all you have to do is run 'npm install', and you'll be all ready to go.
+Once you're in the right directory, all you have to do is run `npm install`, and you'll be all ready to go.
 
 ## Running the Script
-The first thing you'll have to do is point the script to the local copy of the Conduit and Cable Schedule. Open up ccsCheck.js and change the filepath on line 1 to the path of the schedule you're trying to check.
+The first thing you'll have to do is point the script to the local copy of the Conduit and Cable Schedule. Open up ccsCheck.js and change the filepath on line 1 to the path of the schedule you're trying to check. You can open the .js file with any plain ol' text editor.
+
 It'll look like this:
 ```
 var projectSchedule = 'C:\Path\to\your\file.xlsx';
@@ -35,3 +36,13 @@ the script will be empty.
 ```
 [] \\ you're good to go!
 ````````````````````````````````````````````````````````
+
+## Notes
+At the moment, the script ignores all of the following entries:
+
+* TBD
+* TRAY
+* 4/0
+* n/a
+
+You can modify these exceptions by adding or substracting entries from the array `acceptable` on line 2 of ccsCheck.js.

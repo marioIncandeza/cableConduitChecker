@@ -1,5 +1,5 @@
 var projectSchedule = 'trial.xlsx';
-
+var acceptable = ['n/a', 'TBD', 'TRAY', '4/0', 'SPARE'];
 var XLSX = require('xlsx');
 var workbook = XLSX.readFile(projectSchedule);
 var conduit = workbook.Sheets['Conduit Schedule'];
@@ -71,7 +71,7 @@ var matchFlag = 0;
 for (var c=0; c<cableNo.length; c++){
 	for (var p=0; p<splitPath[c].length; p++){
 		matchFlag = 1;
-		if (splitPath[c][p]=='n/a' || splitPath[c][p]=='TRAY' || splitPath[c][p]=='TBD'){
+		if (acceptable.includes(splitPath[c][p])){
 			matchFlag = 0;
 		}
 		var counter = 0;
@@ -96,7 +96,7 @@ var matchFlag = 0;
 for (var c=0; c<conduitNo.length; c++){
 	for (var p=0; p<splitIncluded[c].length; p++){
 		matchFlag = 1;
-		if (splitIncluded[c][p]=='n/a' || splitIncluded[c][p]=='SPARE' || splitIncluded[c][p]=='4/0' || splitIncluded[c][p]=='TBD'){
+		if (acceptable.includes(splitIncluded[c][p])){
 			matchFlag = 0;
 		}
 		var counter = 0;
